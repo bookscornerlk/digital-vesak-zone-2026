@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Dynamic Page Centering Base Styles */
+body.page-body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+/* Structural Main Wrapper to keep cards in center and push footer to base */
+.main-content-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 550px;
+  /* Provides vertical breathing room for cards */
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Outfit', sans-serif;
+  transition: 1s;
+}
+
+#title {
+  background-image: linear-gradient(-225deg,
+      #fcfbfb 0%,
+      #ffac13 29%,
+      #fbff00 67%,
+      #ffffff 100%);
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear;
+  display: inline-block;
+  font-size: 50px;
+  font-family: 'Outfit', sans-serif;
+  user-select: none;
+  font-weight: 800;
+  margin-bottom: -20px;
+  margin-top: 7px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+#main {
+  color: #fff;
+  font-size: 45px;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 10px auto -30px auto;
+  font-weight: 900;
+  font-family: 'Gemunu Libre', sans-serif;
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+#downloadsDiv {
+  display: none;
+}
+
+/* Repositioned cleanly to stay floating within flex structure */
+#mainDiv,
+#downloadsDiv {
+  box-sizing: border-box;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.205);
+  border-radius: 36px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+  border: #bdbdbdb9 1px solid;
+  text-align: center;
+}
+
+#vTbutton {
+  background: #ff5100;
+  text-decoration: none;
+  color: white;
+  padding: 10px 45px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 60px;
+  border: none;
+  width: 310px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  border: #b4b4b468 2px solid;
+}
+
+#vCbutton {
+  background: #b37700;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  width: 310px;
+  box-sizing: border-box;
+  border: #b4b4b468 2px solid;
+}
+
+#vTbutton:hover {
+  box-shadow: 0 0 60px #ff5e00,
+    0 0 120px #ff7b00;
+}
+
+#vCbutton:hover {
+  box-shadow: 0 0 60px #ffaa00,
+    0 0 120px #ff0400;
+}
+
+.href {
+  display: flex;
+  flex-direction: column;
+  background: #0077ff;
+  text-decoration: none;
+  color: white;
+  padding: 10px 45px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 45px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange
+  }
+}
+
+#txt {
+  color: #f7b715;
+  font-size: 95px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+/* Full-Width Liquid Glass Footer Container */
+footer.glass-footer-container {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  border: none;
+  /* Removed completely */
+  z-index: 999;
+  margin-top: auto;
+  position: relative;
+  clear: both;
+
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  /* Blinding neon white light leak emitted directly out of the footer's layout geometry */
+  box-shadow:
+    0 -8px 15px rgba(255, 255, 255, 1.0),
+    /* Blinding white glass illumination */
+    0 -25px 40px rgba(255, 255, 255, 0.95),
+    /* Highly saturated light spread */
+    0 -45px 80px rgba(255, 255, 255, 0.80),
+    /* Massive high-power ambient glow cloud */
+    0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Semi-transparent liquid glass surface panel */
+footer.glass-footer-container .glass-footer-inner {
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  color: #1c1c1e;
+  padding: 40px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  border: none;
+
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+footer.glass-footer-container .glass-brand-block,
+footer.glass-footer-container .glass-social-block {
+  box-sizing: border-box;
+}
+
+footer.glass-footer-container .glass-logo-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+footer.glass-footer-container .glass-logo-inline i {
+  font-size: 1.7rem;
+  color: #0066cc;
+}
+
+footer.glass-footer-container .glass-brand-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #1c1c1e;
+}
+
+footer.glass-footer-container .glass-copyright {
+  font-size: 0.9rem;
+  color: #44444a;
+  margin: 0;
+}
+
+footer.glass-footer-container .glass-social-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+footer.glass-footer-container .glass-social-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #44444a;
+}
+
+footer.glass-footer-container .glass-social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+footer.glass-footer-container .glass-social-icons a {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #1c1c1e;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+footer.glass-footer-container .glass-social-icons a:hover {
+  background: rgba(0, 102, 204, 0.12);
+  color: #0066cc;
+  border-color: rgba(0, 102, 204, 0.4);
+  transform: scale(1.08) translateY(-2px);
+}
+
+/* Responsive Scaling Viewports */
+@media (max-width: 768px) {
+  footer.glass-footer-container .glass-footer-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 24px;
+  }
+
+  footer.glass-footer-container .glass-logo-inline {
+    justify-content: center;
+  }
+
+  footer.glass-footer-container .glass-social-block {
+    align-items: center;
+  }
+}

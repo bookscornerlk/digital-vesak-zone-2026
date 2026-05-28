@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Vesak Zone</title>
+
+    <link rel="shortcut icon" href="vsesakThorana/sources/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-body">
+
+    <!-- Main content wrapper to push footer down -->
+    <main class="main-content-wrapper">
+
+        <div id="mainDiv">
+            <h1 id="title">Books Corner</h1>
+            <h1 id="main">ඩිජිටල් වෙසක් කලාපය</h1>
+            <h1 id="txt">2026</h1>
+            <br>
+            <button class="button" id="vCbutton" onclick="hideMainDiv()">Vesak Cards</button>
+            <br>
+            <br>
+            <a href="vsesakThorana/index.html" class="button" id="vTbutton">වෙසක් තොරණ රාජයා</a>
+        </div>
+
+        <div id="downloadsDiv">
+            <a href="vesakCards/vesakCard.jpg" class="href" download="vesakCard1">Card 1</a>
+            <a href="vesakCards/vesakCard2.avif" class="href" download="vesakCard1">Card 2</a>
+            <a href="vesakCards/vesakCard3.jpg" class="href" download="vesakCard1">Card 3</a>
+            <a href="vesakCards/vesakCard4.jpg" class="href" download="vesakCard1">Card 4</a>
+            <a href="vesakCards/vesakCard5.webp" class="href" download="vesakCard1">Card 5</a>
+            <hr>
+            <button class="button" id="vCbutton" onclick="showMainDiv()">Close</button>
+        </div>
+
+    </main>
+
+    <!-- Full-Width Floating Liquid Glass Footer locked to the bottom -->
+    <footer class="glass-footer-container">
+        <div class="glass-footer-inner">
+
+            <!-- Brand & Integrated Website Icon Block -->
+            <div class="glass-brand-block">
+                <div class="glass-logo-inline">
+                    <!-- Integrated Website Icon -->
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span class="glass-brand-title">Books Corner</span>
+                </div>
+                <p class="glass-copyright">&copy; 2026 Books Corner. All rights reserved.</p>
+            </div>
+
+            <!-- Social Connections Block -->
+            <div class="glass-social-block">
+                <span class="glass-social-label">Follow Us</span>
+                <div class="glass-social-icons">
+                    <a href="https://www.facebook.com/bookscornerLK" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 320 512" fill="#1c1c1e" style="width: 18px; height: 18px;">
+                            <path
+                                d="M80 299.3V256H12v-54.7h68v-40.4c0-67.4 41.2-104 101.2-104 28.8 0 53.5 2.1 60.7 3v70.4l-41.7.1c-32.7 0-39 15.6-39 38.3V201.3h78l-10.1 54.7h-67.9V512H80V299.3z" />
+                        </svg>
+
+                    </a>
+                    <a href="https://www.tiktok.com/@bookscornerlk" target="_blank" aria-label="TikTok">
+
+                        <svg viewBox="0 0 16 16" fill="#1c1c1e"
+                            style="width: 18px; height: 18px; display: inline-block; vertical-align: middle;">
+                            <path
+                                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+                        </svg>
+
+
+                    </a>
+                    <a href="https://bookscornerlk.github.io/home/" target="_blank" aria-label="Website">
+                        <svg xmlns="http://w3.org" viewBox="0 0 16 16" width="50%" height="50%" fill="none"
+                            stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Outer Globe Boundary -->
+                            <circle cx="8" cy="8" r="7" />
+
+                            <!-- Prime Meridian & Equator -->
+                            <line x1="8" y1="1" x2="8" y2="15" />
+                            <line x1="1" y1="8" x2="15" y2="8" />
+
+                            <!-- Accurate Curvature Meridians (Vertical Longitude) -->
+                            <path d="M8 1C9.8 2.8 10.8 5.3 10.8 8S9.8 13.2 8 15" />
+                            <path d="M8 1C6.2 2.8 5.2 5.3 5.2 8S6.2 13.2 8 15" />
+
+                            <!-- Accurate Curvature Parallels (Horizontal Latitude) -->
+                            <path d="M1.5 5h13" />
+                            <path d="M1.5 11h13" />
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Interactive Toggle Scripts -->
+    <script>
+        function hideMainDiv() {
+            document.getElementById("mainDiv").style.display = "none";
+            document.getElementById("downloadsDiv").style.display = "block";
+        }
+        function showMainDiv() {
+            document.getElementById("mainDiv").style.display = "block";
+            document.getElementById("downloadsDiv").style.display = "none";
+        }
+        let date = new Date();
+        let thisMonth = date.getMonth();
+    </script>
+
+    <!-- ©Copyright 2026 Sadew Nethsara -->
+</body>
+
+</html>
