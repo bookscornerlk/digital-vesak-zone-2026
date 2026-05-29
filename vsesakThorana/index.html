@@ -111,16 +111,29 @@
     <div id="audioDiv">
         <hr>
         <h1 id="aTag">Audio Controler</h1>
-        <audio src="sources/audio.mp3" controls autoplay loop></audio>
+        <audio src="sources/audio.mp3" preload="none" loop></audio>
           <hr>
     </div>
 
      <script>
         window.addEventListener('load', function () {
-            const preloader = document.getElementById('preloader');
-            // Adds the fade-out class once everything is ready
-            preloader.classList.add('fade-out');
+    const preloader = document.getElementById('preloader');
+    const vesakAudio = document.getElementById('vesakAudio');
+    
+    // 1. Adds the fade-out class once layout and images are ready
+    preloader.classList.add('fade-out');
+    
+    // 2. Now safely inject and load the audio in the background 
+    if (vesakAudio) {
+        vesakAudio.src = "assets/your-audio-file.mp3"; // Put your actual audio file path here
+        vesakAudio.load(); 
+        
+        // Optional: Attempt to play it automatically once the asset initializes
+        vesakAudio.play().catch(e => {
+            console.log("Autoplay paused. Audio will play as soon as the user clicks the screen.");
         });
+    }
+});
     </script>
     
     <script src="script.js"></script>
