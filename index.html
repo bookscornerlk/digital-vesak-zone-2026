@@ -4,18 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Vesak Zone 2026 by Books Corner</title>
-    <meta name="google-site-verification" content="v96631U9iamGh5pL-5EmrGkTK52NnhX8Fa17listRy0" />
-
-    <meta name="description" content="Experience the spirit of the Vesak festival online with our Digital Vesak Zone 2026. Digital Vesak Thorana by Books Corner">
-    <meta name="keywords" content="digital vesak thorana, books corner thorana, Vesak 2026, digital thorana, virtual pandal, Sri Lanka Vesak, Books Corner, Vesak zone, online thorana">
-    <meta name="author" content="Books Corner">
+    <title>Digital Vesak Zone</title>
 
     <link rel="shortcut icon" href="vsesakThorana/sources/logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="page-body">
+    <!-- Full-screen Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <!-- Traditional glowing text loader -->
+            <h1 class="vesak-load-text">Digital Vesak Zone 2026</h1>
+            <div class="spinner"></div>
+            <p>Loading the Vesak Zone...</p>
+        </div>
+    </div>
 
     <!-- Main content wrapper to push footer down -->
     <main class="main-content-wrapper">
@@ -116,6 +120,14 @@
         }
         let date = new Date();
         let thisMonth = date.getMonth();
+    </script>
+
+    <script>
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            // Adds the fade-out class once everything is ready
+            preloader.classList.add('fade-out');
+        });
     </script>
 
     <!-- ©Copyright 2026 Sadew Nethsara -->
