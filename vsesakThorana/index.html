@@ -12,6 +12,16 @@
 </head>
 
 <body>
+    <!-- Full-screen Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <!-- Traditional glowing text loader -->
+            <h1 class="vesak-load-text">Digital Vesak Thorana 2026</h1>
+            <div class="spinner"></div>
+            <p>Loading the Vesak Thorana...</p>
+        </div>
+    </div>
+    
     <div id="thorana">
         <center>
             <div id="chapter9" class="chapters">
@@ -105,10 +115,14 @@
           <hr>
     </div>
 
-
-
+     <script>
+        window.addEventListener('load', function () {
+            const preloader = document.getElementById('preloader');
+            // Adds the fade-out class once everything is ready
+            preloader.classList.add('fade-out');
+        });
+    </script>
     
-
     <script src="script.js"></script>
 </body>
 
