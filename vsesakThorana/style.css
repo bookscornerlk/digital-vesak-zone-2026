@@ -4,7 +4,8 @@
 body {
     background: url("sources/background1.avif");
     background-size: cover;
-    overflow-x: hidden;  
+    overflow-x: hidden;
+    
 }
 
 /* Preloader Layer */
