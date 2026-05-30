@@ -111,34 +111,37 @@
     <div id="audioDiv">
         <hr>
         <h1 id="aTag">Audio Controler</h1>
-        <audio src="sources/audio.m4a" preload="none" controls loop id="vesakAudio"></audio>
+        <audio preload="none" controls loop id="vesakAudio"></audio>
           <hr>
     </div>
 
-     <script>
-       window.addEventListener('load', function () {
-        const preloader = document.getElementById('preloader');
-        const vesakAudio = document.getElementById('vesakAudio');
     
-        // 1. Drop the preloader instantly without waiting for the audio setup
-        if (preloader) {
+
+
+<!-- 2. The Smart Script -->
+<script>
+  window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    const vesakAudio = document.getElementById('vesakAudio');
+    
+    // 1. Drop the preloader screen instantly
+    if (preloader) {
         preloader.classList.add('fade-out');
-        }
+    }
     
-        // 2. Put the audio initialization inside a macro-task timeout (100ms delay).
-        // This forces the browser to prioritize rendering the fade-out animation FIRST.
-        setTimeout(function() {
-            if (vesakAudio) {
-            vesakAudio.src = "sources/audio.m4a"; 
+    // 2. Wait 100ms for the animation to start, then load the heavy audio file
+    setTimeout(function() {
+        if (vesakAudio) {
+            vesakAudio.src = "sources/audio.m4a"; // Injecting the source file here!
             vesakAudio.load(); 
             
             vesakAudio.play().catch(e => {
-                console.log("Autoplay paused. Audio plays as soon as the user touches the screen.");
-                });
-            }
-        }, 100); // 100 milliseconds is all it takes to break the execution block!
-       });
-    </script>
+                console.log("Autoplay paused. Audio will play as soon as the user interacts with the page.");
+            });
+        }
+    }, 100);
+  });
+</script>
     
     <script src="script.js"></script>
 </body>
